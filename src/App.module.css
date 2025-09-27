@@ -1,0 +1,154 @@
+/* src/App.module.css */
+
+/* Contenedor principal de la aplicación */
+.appContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Título */
+.title {
+  font-size: 2.5rem; 
+  font-weight: 700;
+  margin-bottom: 2rem; 
+  text-align: center;
+  color: #f3f4f6; /* Texto claro */
+}
+
+/* Controles (Búsqueda y Botón Añadir) */
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563; 
+  background-color: #374151; 
+  color: #f3f4f6; 
+  font-size: 1rem;
+}
+
+.addButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6; 
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+  font-weight: 600;
+  flex-shrink: 0; 
+}
+
+.addButton:hover {
+  background-color: #2563eb;
+}
+
+/* Cuadrícula de Posts (ADAPTABILIDAD) */
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem; 
+}
+
+/* Tarjeta de Post */
+.productCard {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 1.25rem;
+  border-radius: 0.75rem; 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  height: 100%; 
+}
+
+.productCard:hover {
+  transform: translateY(-8px); 
+}
+
+.productTitle {
+  font-size: 1.125rem; 
+  font-weight: 700;
+  text-align: left; 
+  margin-bottom: 0.75rem;
+  color: #1f2937; 
+  line-height: 1.3;
+}
+
+.productDescription {
+  font-size: 0.95rem; 
+  color: #4b5563;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; 
+  line-height: 1.5;
+}
+
+/* Botones de acción dentro de la tarjeta */
+.cardButtons {
+  margin-top: auto; 
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.editButton, .deleteButton {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  flex-grow: 1; 
+}
+
+.editButton {
+  background-color: #f59e0b; 
+  color: white;
+}
+
+.editButton:hover {
+  background-color: #d97706;
+}
+
+.deleteButton {
+  background-color: #ef4444; 
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #dc2626;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #9ca3af;
+  width: 100%;
+  grid-column: 1 / -1; 
+  padding: 3rem;
+}
+
+/* Estilos de Loading/Error */
+.loadingContainer, .errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loadingText {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+.errorText {
+  font-size: 1.5rem;
+  color: #ef4444;
+}
